@@ -7,37 +7,37 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int cycleChoose = 0;
         CoffeeMachine coffeeMachine = new CoffeeMachine(2000, 2000, 500);
-do {
-    coffeeMachine.printStatus();
-    System.out.println();
-    System.out.println("1 - Espresso/ 2 - Americano/ 3 - Latte / 4 - Cappuchino");
-    int choose = scanner.nextInt();
-    if (choose == 3 || choose == 4) {
-        coffeeMachine.inputMilk();
-    }
-    coffeeMachine.buyCoffee(choose);
-    System.out.println();
-    coffeeMachine.printStatus();
-    System.out.println("\nStorage Of Used Beans - " + coffeeMachine.getStorageOfUsedBeans());
+		do {
+			coffeeMachine.printStatus();
+			System.out.println();
+			System.out.println("1 - Espresso/ 2 - Americano/ 3 - Latte / 4 - Cappuchino");
+			int choose = scanner.nextInt();
+			if (choose == 3 || choose == 4) {
+				coffeeMachine.inputMilk();
+			}
+			coffeeMachine.buyCoffee(choose);
+			System.out.println();
+			coffeeMachine.printStatus();
+			System.out.println("\nStorage Of Used Beans - " + coffeeMachine.getStorageOfUsedBeans());
 
-    System.out.println();
-    System.out.println();
-    System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
 
-    System.out.println("Wanna Refill CoffeeMachine? 1 - Yes/ 2 - No");
-    int refillChoose = scanner.nextInt();
-    if(refillChoose == 1){
-        System.out.println("Enter Amount Of Water - ");
-        int water = scanner.nextInt();
-        System.out.println("Enter Amount Of Milk - ");
-        int milk = scanner.nextInt();
-        System.out.println("Enter Amount Of Beans - ");
-        int beans = scanner.nextInt();
-        coffeeMachine.fillMachine(water, milk, beans);
-    }
-    System.out.println("Exit - 2");
-    cycleChoose = scanner.nextInt();
-} while (cycleChoose == 1);
+			System.out.println("Wanna Refill CoffeeMachine? 1 - Yes/ 2 - No");
+			int refillChoose = scanner.nextInt();
+			if(refillChoose == 1) {
+				System.out.println("Enter Amount Of Water - ");
+				int water = scanner.nextInt();
+				System.out.println("Enter Amount Of Milk - ");
+				int milk = scanner.nextInt();
+				System.out.println("Enter Amount Of Beans - ");
+				int beans = scanner.nextInt();
+				coffeeMachine.fillMachine(water, milk, beans);
+			}
+			System.out.println("Exit - 2");
+			cycleChoose = scanner.nextInt();
+		} while (cycleChoose == 1);
     }
 }
 
@@ -123,7 +123,6 @@ class CoffeeMachine {
         water += waterToAdd;
         milk += milkToAdd;
         coffeeBeans += beansToAdd;
-
     }
 
     public void inputMilk() {
