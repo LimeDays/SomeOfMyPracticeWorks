@@ -16,9 +16,6 @@ class List<T extends Comparable<T>> {
         arrays[arrays.length - 1] = item;
     }
 
-    public T get(int idx) {
-        return arrays[idx];
-    }
 
     public T min() {
         T min = arrays[0];
